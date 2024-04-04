@@ -1,14 +1,22 @@
 {
-  "name": "portfolio-website",
-  "module": "index.ts",
+  "name": "threejs-starter",
+  "private": true,
+  "version": "0.0.0",
   "type": "module",
-  "devDependencies": {
-    "@types/bun": "latest"
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+  "devDependencies": {
+    "@types/three": "^0.160.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.8"
   },
   "dependencies": {
-    "three": "^0.163.0"
+    "gsap": "^3.12.4",
+    "lil-gui": "^0.19.1",
+    "stats.js": "^0.17.0",
+    "three": "^0.160.0"
   }
 }

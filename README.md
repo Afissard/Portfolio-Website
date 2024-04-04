@@ -1,5 +1,10 @@
 # Portfolio Website - Chauvel Sacha
 [lien repository github](https://github.com/Afissard/Portfolio-Website)
+## run instruction
+```bash
+bun run dev
+```
+[page web](http://localhost:5173/)
 # Cahier des charges : originalité
 - quelque chose de visuellement impressionnant et original comme de la 3D (assez minimaliste) ->  Javascript/Typescript + un framework (three js) …
 - Shaders ?
