@@ -1,23 +1,29 @@
-import '/css/style.css';
-import * as THREE from 'three';
+import "/css/style.css";
+import * as THREE from "three";
+import * as helpers from "../src/helpers.ts";
+import * as light from "../src/lights.ts";
+import * as star from "../src/stars.ts";
+import * as placeHolder from "../src/plqceHolderBlock.ts";
 
 // Setup
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-const canvas = document.querySelector('#bg') as HTMLCanvasElement;
+const camera = new THREE.PerspectiveCamera(
+	75,
+	window.innerWidth / window.innerHeight,
+	0.1,
+	1000
+);
+const canvas = document.querySelector("#bg") as HTMLCanvasElement;
 const renderer = new THREE.WebGLRenderer({
-    canvas: canvas,
+	canvas: canvas,
 });
 
-// Function to resize the canvas
+// Canvas resize
 function resizeCanvas() {
-    renderer.setSize(window.innerWidth, window.innerHeight);
+	renderer.setSize(window.innerWidth, window.innerHeight);
 }
-// Initial call to resize canvas
-resizeCanvas();
-// Listen for window resize events
-window.addEventListener('resize', resizeCanvas);
-
+resizeCanvas(); // Initial call to resize canvas
+window.addEventListener("resize", resizeCanvas); // Listen for window resize events
 
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -26,40 +32,44 @@ camera.position.setX(-3);
 
 renderer.render(scene, camera);
 
-// Torus
-
-const geometry = new THREE.TorusGeometry(10, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({ color: 0xff6347 });
-const torus = new THREE.Mesh(geometry, material);
-
-scene.add(torus);
+// Helpers
+helpers.addGridHelper(scene);
 
 // Lights
+light.addAmbientLight(scene);
 
-const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(5, 5, 5);
+// stars
+Array(256)
+	.fill(0)
+	.forEach(() => star.addStar(scene));
 
-const ambientLight = new THREE.AmbientLight(0xffffff);
-scene.add(pointLight, ambientLight);
+// PlaceHolders
+const ph1 = new placeHolder.PlaceHolderBlock(scene);
 
-// Helpers
-// const lightHelper = new THREE.PointLightHelper(pointLight)
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper)
-// const controls = new OrbitControls(camera, renderer.domElement);
+// camera
+function moveCamera() {
+	/*
+    TODO: smooth translation to the next section -> no need for long scroll
+    */
+	const t = document.body.getBoundingClientRect().top;
 
+	const moveSpeed = -0.01;
+	camera.position.z = t * moveSpeed;
+	camera.position.x = t * moveSpeed * 0.01;
+	camera.rotation.y = t * moveSpeed * 0.0001;
+	camera.position.y = t * moveSpeed * 0.1;
+}
+
+document.body.onscroll = moveCamera;
+moveCamera();
+
+// animation
 function animate() {
-    requestAnimationFrame(animate);
-  
-    torus.rotation.x += 0.01;
-    torus.rotation.y += 0.005;
-    torus.rotation.z += 0.01;
-  
-    // moon.rotation.x += 0.005;
-  
-    // controls.update();
-  
-    renderer.render(scene, camera);
-  }
-  
-  animate();
+	requestAnimationFrame(animate);
+
+	ph1.Animate();
+
+	renderer.render(scene, camera);
+}
+
+animate();
