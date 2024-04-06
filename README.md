@@ -1,6 +1,8 @@
 # Portfolio Website - Chauvel Sacha
 [lien vers le dépôt GitHub](https://github.com/Afissard/Portfolio-Website)
 
+![image du site web, WIP](img/website_current_stage.png)
+
 ## Exécution du projet (nécessite Bun)
 [site de Bun](https://bun.sh/)
 

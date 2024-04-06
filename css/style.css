@@ -14,7 +14,7 @@ canvas {
 
 main {
     width: 100vw;
-    height: 500vw; /* required to sroll */
+    height: 1000vw; /* required to sroll */
     color: rgb(200,200,200);
     z-index: 999;
     position: absolute;

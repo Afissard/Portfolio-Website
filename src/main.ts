@@ -44,7 +44,12 @@ Array(256)
 	.forEach(() => star.addStar(scene));
 
 // PlaceHolders
-const ph1 = new placeHolder.PlaceHolderBlock(scene);
+const ph1 = new placeHolder.PlaceHolderBlock(scene, 0, 0, -16);
+const ph2 = new placeHolder.PlaceHolderBlock(scene, -8, 5, 32);
+const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
+const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
+const ph5 = new placeHolder.PlaceHolderBlock(scene, 15, 15, 128);
+const ph6 = new placeHolder.PlaceHolderBlock(scene, -15, 20, 160);
 
 // camera
 function moveCamera() {
@@ -56,7 +61,7 @@ function moveCamera() {
 	const moveSpeed = -0.01;
 	camera.position.z = t * moveSpeed;
 	camera.position.x = t * moveSpeed * 0.01;
-	camera.rotation.y = t * moveSpeed * 0.0001;
+	camera.rotation.y = t * moveSpeed * 0.001;
 	camera.position.y = t * moveSpeed * 0.1;
 }
 
@@ -68,7 +73,12 @@ function animate() {
 	requestAnimationFrame(animate);
 
 	ph1.Animate();
-
+	ph2.Animate();
+	ph3.Animate();
+	ph4.Animate();
+	ph5.Animate();
+	ph6.Animate();
+	
 	renderer.render(scene, camera);
 }
 
