@@ -39,12 +39,12 @@ helpers.addGridHelper(scene);
 light.addAmbientLight(scene);
 
 // stars
-Array(256)
+Array(512)
 	.fill(0)
 	.forEach(() => star.addStar(scene));
 
 // PlaceHolders
-const ph1 = new placeHolder.PlaceHolderBlock(scene, 0, 0, -16);
+const ph1 = new placeHolder.PlaceHolderBlock(scene, 8, 0, -16);
 const ph2 = new placeHolder.PlaceHolderBlock(scene, -8, 5, 32);
 const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
 const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);

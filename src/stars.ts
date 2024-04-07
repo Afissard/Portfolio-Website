@@ -8,7 +8,7 @@ export function addStar(scene: THREE.Scene) {
 
 	const [x, y, z] = Array(3)
 		.fill(0)
-		.map(() => THREE.MathUtils.randFloatSpread(500));
+		.map(() => THREE.MathUtils.randFloatSpread(800));
 
 	star.position.set(x, y, z);
 	scene.add(star);

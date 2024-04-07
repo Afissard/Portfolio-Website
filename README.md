@@ -3,8 +3,8 @@
 
 ![image du site web, WIP](img/website_current_stage.png)
 
-## Exécution du projet (nécessite Bun)
-[site de Bun](https://bun.sh/)
+## Exécution du projet
+nécessite [Bun](https://bun.sh/)
 
 Installation des dépendances
 ```bash
