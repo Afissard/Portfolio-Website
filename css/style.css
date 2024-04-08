@@ -20,7 +20,7 @@ canvas {
 main {
     width: 100%;
     /* required to sroll */
-    height: 1000vw; 
+    /* height: 1000vw;  */
     color: rgb(200,200,200);
     z-index: 999;
     position: absolute;
@@ -28,27 +28,51 @@ main {
     padding: 120px 0px;
     
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .left {
-    grid-column: 1 / 6;
+    grid-column: 1 / 2;
 }
 
 .right {
-    grid-column: 6 / 11;
+    grid-column: 2 / 3;
+}
+
+.one {
+    grid-row: 1;
+}
+.two {
+    grid-row: 2;
+}
+.three {
+    grid-row: 3;
+}
+.four {
+    grid-row: 4;
+}
+.five {
+    grid-row: 5;
+}
+.six {
+    grid-row: 6;
 }
 
 div {
     margin: 1rem;
+    margin-bottom: 50rem;
     height: min-content;
+
+
+    display: flex;
+    flex-flow: column;
 }
 
 blockquote {
     padding: 1rem;
     background: var(--light-bg);
     color: var(--dark-bg);
-    margin-bottom: 20rem;
 }
 
 section {

@@ -51,6 +51,10 @@ const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
 const ph5 = new placeHolder.PlaceHolderBlock(scene, 15, 15, 128);
 const ph6 = new placeHolder.PlaceHolderBlock(scene, -15, 20, 160);
 
+// function scrollTo(hash) {
+//     location.hash = "#" + hash;
+// }
+
 // camera
 function moveCamera() {
 	/*
@@ -59,7 +63,7 @@ function moveCamera() {
 	const t = document.body.getBoundingClientRect().top;
 
 	const moveSpeed = -0.01;
-	camera.position.z = t * moveSpeed;
+	camera.position.z = t * moveSpeed * 2;
 	camera.position.x = t * moveSpeed * 0.01;
 	camera.rotation.y = t * moveSpeed * 0.001;
 	camera.position.y = t * moveSpeed * 0.1;
