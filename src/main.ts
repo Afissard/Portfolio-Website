@@ -1,6 +1,6 @@
 import "/css/style.css";
 import * as THREE from "three";
-import * as helpers from "../src/helpers.ts";
+// import * as helpers from "../src/helpers.ts";
 import * as light from "../src/lights.ts";
 import * as star from "../src/stars.ts";
 import * as placeHolder from "../src/plqceHolderBlock.ts";
@@ -33,7 +33,7 @@ camera.position.setX(-3);
 renderer.render(scene, camera);
 
 // Helpers
-helpers.addGridHelper(scene);
+// helpers.addGridHelper(scene);
 
 // Lights
 light.addAmbientLight(scene);
