@@ -32,7 +32,7 @@ Fonctionnalité à coder : un léger coup de scroll permet de se déplacer d'une
 
 ### site
 Petite phrase / citation qui me définit puis brève présentation. À droite en décor, un autoportrait (3D low poly).
-
+Modèle 3D : mon avatar chevauchant une fusée d'artifice
 ### rédaction
 **citation :** “Il faut toujours viser la lune, car même en cas d'échec, on atterrit dans les étoiles.” (Oscar Wilde)
 
@@ -43,7 +43,7 @@ Petite phrase / citation qui me définit puis brève présentation. À droite en
 
 ### site
 Une image de mon CV (à corriger pour correspondre à un CV général et non à un job d'été), cliquée elle ouvre une page de téléchargement/visualisation du CV en PDF.
-
+Modèle 3D : avatar en holograme position "wanted"
 ### CV en PDF
 [mon CV](./website-content/CV%20Sacha%20Chauvel%20-%20Stage.pdf)
 
@@ -52,9 +52,10 @@ Une image de mon CV (à corriger pour correspondre à un CV général et non à 
 
 ### site
 Lettre de motivation à écrire, présentation dans le même style que le CV (image avec redirection).
-
+Modèle 3D : TODO
 ### lettre de motivation en PDF
-TODO: à rédiger.
+(Recrutement Ankama)[https://recrutement.ankama.com/]
+[ma lettre de motivation](./website-content/Sacha%20Chauvel%20Lettre%20de%20motivation%20stage%20BUT2.pdf)
 
 ## 4 Projet scolaire
 > Il s'agit de parler de son parcours scolaire et de la poursuite de ce dernier. Il faut mettre en évidence tous les projets que vous avez mis en œuvre dans le cadre de vos études.
@@ -62,7 +63,7 @@ TODO: à rédiger.
 ### site
 Une frise chronologique (horizontale), donnant les périodes et les projets scolaires réalisés.
 Chaque période pourrait être un petit astre gravitant autour de l'astre principal. Pour voir le suivant, il faudrait pouvoir cliquer sur un bouton et faire défiler les astres.
-
+Modèle 3D : avatar parmis des piles de livres
 ### rédaction
 TODO.
 
@@ -71,7 +72,7 @@ TODO.
 
 ### site
 Même présentation que le parcours scolaire.
-
+Modèle 3D : avatar face à un ordinateur retro (ecrant cathodique, exemple Macintosh)
 ### rédaction
 TODO.
 
@@ -81,6 +82,6 @@ TODO.
 
 ### site
 Même présentation que précédente (sans la partie chronologique ?).
-
+Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir)
 ### rédaction
 TODO.
