@@ -1,9 +1,11 @@
 import * as THREE from "three";
 
 export function addStar(scene: THREE.Scene) {
-	const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-	const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
-	material.emissive = new THREE.Color(0xffffff); // emit light
+	// const starColor1 = 0xffffff;
+	const starColor2 = 0xf8f8f8;
+	const geometry = new THREE.SphereGeometry(0.75, 24, 24);
+	const material = new THREE.MeshStandardMaterial({ color: starColor2 });
+	material.emissive = new THREE.Color(starColor2); // emit light
 	const star = new THREE.Mesh(geometry, material);
 
 	const [x, y, z] = Array(3)

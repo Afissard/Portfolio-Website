@@ -1,12 +1,30 @@
+@font-face{
+    font-family: FaktosFont;
+    src: url("/fonts/faktos/Faktos.otf");
+}
+@font-face {
+    font-family: FaktosShadowFont;
+    src: url("/fonts/faktos/FaktosShadow.otf");
+}
+
+@font-face {
+    font-family: JohnstonFont;
+    src: url("/fonts/Johnston/Johnston-ITC-Std-Medium.otf");
+}
+
 :root {
     --dark-bg: rgba(20, 20, 20, 0.95);
     --light-bg: rgba(200, 200, 200, 0.95);
     --black-col: rgba(20, 20, 20, 1);
-    --white-col: rgba(200, 200, 200, 1);
+    --white-col: rgba(240, 240, 240, 1);
+
+    --hl1-col: linear-gradient(45deg, #fc3354 0%, #fc259b 100%);
+    --hl2-col: linear-gradient(45deg, #de33fc 0%, #7725fc 100%);
   
-    font-family: brandon-grotesque, sans-serif;
+    font-family: JohnstonFont, sans-serif;
     font-weight: 400;
     font-style: normal;
+    font-size: x-large;
     color: var(--white-col);
 
     overflow-x: hidden;
@@ -24,65 +42,55 @@ main {
     width: 100%;
     /* required to sroll */
     /* height: 1000vw;  */
-    color: rgb(200,200,200);
-    z-index: 999;
+    color: var(--white-col);
+    z-index: 998;
     position: absolute;
     margin: 0px auto;
-    padding: 120px 0px;
-    
-    display: grid;
-    /* grid-template-rows: repeat(5, 1fr); */
-    grid-auto-rows: minmax(1fr, auto);
-    grid-template-columns: repeat(2, 1fr);
 }
 
-.left {
-    grid-column: 1 / 2;
-}
-
-.right {
-    grid-column: 2 / 3;
-}
-
-.one {
-    grid-row: 1;
-}
-.two {
-    grid-row: 2;
-}
-.three {
-    grid-row: 3;
-}
-.four {
-    grid-row: 4;
-}
-.five {
-    grid-row: 5;
-}
-.six {
-    grid-row: 6;
-}
 
 div {
-    margin: 1rem;
-    margin-bottom: 50rem;
     height: min-content;
-
 
     display: flex;
     flex-flow: column;
 }
 
+.separator {
+    margin-bottom: 50rem;
+}
+
 blockquote {
-    padding: 1rem;
-    background: var(--light-bg);
-    color: var(--black-col);
+    padding: 1rem 5rem 1rem 5rem;
+    /* background: var(--light-bg);
+    color: var(--black-col); */
     border-radius: 3rem;
 }
 
 section {
-    padding: 1rem;
+    padding: 1rem 4rem 1rem 4rem;
     height: min-content;
-    background: var(--dark-bg);
-    border-radius: 3rem;
+    /* background: var(--dark-bg);
+    border-radius: 3rem; */
+}
+
+
+h1, h2 {
+    font-weight: 400;
+    font-family: FaktosFont;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin-top: -1.75rem;
+    /* background-color: #f3ec78; */
+    background-image: var(--hl1-col);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
 }

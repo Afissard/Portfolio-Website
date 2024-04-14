@@ -20,7 +20,7 @@ export class PlaceHolderBlock {
 
 	public Animate() {
 		this.block.rotation.x += 0.01;
-		this.block.rotation.y += 0.005;
+		this.block.rotation.y += 0.01;
 		this.block.rotation.z += 0.01;
 	}
 }

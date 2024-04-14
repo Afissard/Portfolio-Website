@@ -1,0 +1,108 @@
+@font-face{
+    font-family: FaktosFont;
+    src: url("/fonts/faktos/Faktos.otf");
+}
+@font-face {
+    font-family: FaktosShadowFont;
+    src: url("/fonts/faktos/FaktosShadow.otf");
+}
+
+@font-face {
+    font-family: JohnstonFont;
+    src: url("/fonts/Johnston/Johnston-ITC-Std-Medium.otf");
+}
+
+@keyframes appear {
+    from {
+      opacity: 0; /* Start with opacity 0 (invisible) */
+    }
+    to {
+      opacity: 1; /* End with opacity 1 (fully visible) */
+    }
+  }
+
+:root {
+    --dark-bg: rgba(20, 20, 20, 0.95);
+    --light-bg: rgba(200, 200, 200, 0.95);
+    --black-col: rgba(20, 20, 20, 1);
+    --white-col: rgba(240, 240, 240, 1);
+
+    --hl1-col: linear-gradient(45deg, #fc3354 0%, #fc259b 100%);
+    --hl2-col: linear-gradient(45deg, #de33fc 0%, #7725fc 100%);
+  
+    font-family: JohnstonFont, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: x-large;
+    color: var(--white-col);
+
+    overflow-x: hidden;
+}
+
+
+
+nav {
+    /* position */
+    padding: 0.5rem;
+    position: fixed;
+    z-index: 999;
+    justify-content: left;
+    width: 100%;
+    height: auto; 
+
+    /* flex */
+    display: flex;
+    flex-direction: row;
+}
+
+a {
+    margin: 0rem 0.5rem 0rem 0.5rem;
+
+    background-image: var(--hl2-col);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+a:hover {
+    background-image: var(--hl1-col);
+}
+
+
+
+.box {
+    /* width: 200px;
+    height: 200px; */
+    display: flex;
+    justify-content: left;
+    transition: all 0.3s ease;
+}
+
+.box > img {
+    width: 1rem;
+    height: 1rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+}
+
+.textHidden > p {
+    margin: 0.2rem;
+}
+  
+.box:hover {
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    animation: appear 1s ease forwards;
+    background-color: var(--dark-bg);
+    border-radius: 1rem;
+}
+
+.textHidden {
+    display: none;
+}
+
+.box:hover .textHidden {
+    display: flex;
+}

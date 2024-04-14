@@ -38,6 +38,10 @@ renderer.render(scene, camera);
 // Lights
 light.addAmbientLight(scene);
 
+// Background
+// const spaceTexture = new THREE.TextureLoader().load('../img/background.png');
+// scene.background = spaceTexture;
+
 // stars
 Array(512)
 	.fill(0)
