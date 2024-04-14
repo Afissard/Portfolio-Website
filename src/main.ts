@@ -1,9 +1,12 @@
 import "/css/style.css";
 import * as THREE from "three";
 // import * as helpers from "../src/helpers.ts";
+import * as loaderFunc from "../src/loader.ts";
 import * as light from "../src/lights.ts";
 import * as star from "../src/stars.ts";
 import * as placeHolder from "../src/plqceHolderBlock.ts";
+import * as rocketRider from "../src/rocketRider.ts";
+
 
 // Setup
 const scene = new THREE.Scene();
@@ -18,6 +21,7 @@ const renderer = new THREE.WebGLRenderer({
 	canvas: canvas,
 });
 
+
 // Canvas resize
 function resizeCanvas() {
 	renderer.setSize(window.innerWidth, window.innerHeight);
@@ -30,6 +34,7 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 camera.position.setX(-3);
 
+
 renderer.render(scene, camera);
 
 // Helpers
@@ -38,9 +43,6 @@ renderer.render(scene, camera);
 // Lights
 light.addAmbientLight(scene);
 
-// Background
-// const spaceTexture = new THREE.TextureLoader().load('../img/background.png');
-// scene.background = spaceTexture;
 
 // stars
 Array(512)
@@ -48,12 +50,17 @@ Array(512)
 	.forEach(() => star.addStar(scene));
 
 // PlaceHolders
-const ph1 = new placeHolder.PlaceHolderBlock(scene, 8, 0, -16);
+// const ph1 = new placeHolder.PlaceHolderBlock(scene, 8, 0, -16);
 const ph2 = new placeHolder.PlaceHolderBlock(scene, -8, 5, 32);
 const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
 const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
 const ph5 = new placeHolder.PlaceHolderBlock(scene, 15, 15, 128);
 const ph6 = new placeHolder.PlaceHolderBlock(scene, -15, 20, 160);
+
+// load 3D model
+
+const rocketRiderObj = await loaderFunc.loadGLTFObject("/3d/rocket_rider.gltf");
+const rocketRiderModel = new rocketRider.RocketRider(scene, rocketRiderObj, 5, 0, -8);
 
 // function scrollTo(hash) {
 //     location.hash = "#" + hash;
@@ -80,12 +87,14 @@ moveCamera();
 function animate() {
 	requestAnimationFrame(animate);
 
-	ph1.Animate();
+	// ph1.Animate();
 	ph2.Animate();
 	ph3.Animate();
 	ph4.Animate();
 	ph5.Animate();
 	ph6.Animate();
+
+	rocketRiderModel.Animate()
 	
 	renderer.render(scene, camera);
 }

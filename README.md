@@ -3,6 +3,7 @@
 
 ![image du site web, WIP](img/website_current_stage_01.png)
 ![image du site web, WIP](img/website_current_stage_02.png)
+![image du site web, WIP](img/website_current_stage_03.png)
 
 ## Exécution du projet
 nécessite [Bun](https://bun.sh/)
@@ -37,7 +38,7 @@ Modèle 3D : mon avatar chevauchant une fusée d'artifice
 ### rédaction
 **citation :** “Il faut toujours viser la lune, car même en cas d'échec, on atterrit dans les étoiles.” (Oscar Wilde)
 
-**brève présentation :** Sacha Chauvel. Je suis étudiant en BUT informatique et j'aimerais travailler dans l'industrie du jeu vidéo.
+**brève présentation :** Sacha Chauvel. Je suis étudiant en BUT informatique et j'aimerais travailler dans l'industrie du jeu vidéo...
 
 ## 2 Curriculum Vitae
 > Un CV à jour détaillant la formation, les expériences de travail, les compétences, les certifications et d'autres réalisations pertinentes.
@@ -83,6 +84,6 @@ TODO.
 
 ### site
 Même présentation que précédente (sans la partie chronologique ?).
-Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir)
+Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir) -> Avatar faisant de la magie ...
 ### rédaction
 TODO.
