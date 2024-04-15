@@ -1,3 +1,4 @@
+/* 
 @font-face{
     font-family: FaktosFont;
     src: url("/fonts/faktos/Faktos.otf");
@@ -10,7 +11,8 @@
 @font-face {
     font-family: JohnstonFont;
     src: url("/fonts/Johnston/Johnston-ITC-Std-Medium.otf");
-}
+} 
+*/
 
 @keyframes appear {
     from {
@@ -21,8 +23,9 @@
     }
   }
 
+/* 
 :root {
-    --dark-bg: rgba(20, 20, 20, 0.95);
+    --dark-bg: rgba(0, 0, 0, 0.90);
     --light-bg: rgba(200, 200, 200, 0.95);
     --black-col: rgba(20, 20, 20, 1);
     --white-col: rgba(240, 240, 240, 1);
@@ -37,9 +40,8 @@
     color: var(--white-col);
 
     overflow-x: hidden;
-}
-
-
+} 
+*/
 
 nav {
     /* position */
@@ -57,6 +59,7 @@ nav {
 
 a {
     margin: 0rem 0.5rem 0rem 0.5rem;
+    text-decoration: none;
 
     background-image: var(--hl2-col);
     background-size: 100%;
@@ -72,7 +75,7 @@ a:hover {
 
 
 
-.box {
+.menu-box {
     /* width: 200px;
     height: 200px; */
     display: flex;
@@ -80,7 +83,7 @@ a:hover {
     transition: all 0.3s ease;
 }
 
-.box > img {
+.menu-box > img {
     width: 1rem;
     height: 1rem;
     margin: 0rem 0.5rem 0rem 0.5rem;
@@ -90,19 +93,23 @@ a:hover {
     margin: 0.2rem;
 }
   
-.box:hover {
+.menu-box:hover {
     width: auto;
     height: auto;
     padding: 0.5rem;
     animation: appear 1s ease forwards;
     background-color: var(--dark-bg);
+    /* background-color: rgba(0, 0, 0, 0.90); */
+    border: solid;
     border-radius: 1rem;
+    /* border-width: 5px; */
+    border-color: var(--white-col);
 }
 
 .textHidden {
     display: none;
 }
 
-.box:hover .textHidden {
+.menu-box:hover .textHidden {
     display: flex;
 }
