@@ -1,11 +1,6 @@
 # Portfolio Website - Chauvel Sacha
 [lien vers le dépôt GitHub](https://github.com/Afissard/Portfolio-Website)
 
-![image du site web, WIP](img/website_current_stage_01.png)
-![image du site web, WIP](img/website_current_stage_02.png)
-![image du site web, WIP](img/website_current_stage_03.png)
-![image du site web, WIP](img/website_current_stage_04.png)
-
 ## Exécution du projet
 nécessite [Bun](https://bun.sh/)
 
@@ -28,6 +23,12 @@ Le site est un "système solaire", en scrollant la caméra se déplace du centre
 
 Cette image reste un concept, puisque le rail de la caméra suivra un axe prédéfini (peut-être une légère courbe), les astres ayant du contenu seront donc tous plus ou moins alignés, ceux en arrière-plan n'ont qu'un but décoratif.
 Fonctionnalité à coder : un léger coup de scroll permet de se déplacer d'une section à l'autre -> moins de fatigue pour parcourir le site.
+
+## Evolution du développement
+![image du site web, WIP](img/website_current_stage_01.png)
+![image du site web, WIP](img/website_current_stage_02.png)
+![image du site web, WIP](img/website_current_stage_03.png)
+![image du site web, WIP](img/website_current_stage_04.png)
 
 # Structure et contenu
 ## 1 Introduction
@@ -65,8 +66,6 @@ Un liens vers mon CV en PDF.
 Une frise chronologique (horizontale), donnant les périodes et les projets scolaires réalisés.
 Chaque période pourrait être un petit astre gravitant autour de l'astre principal. Pour voir le suivant, il faudrait pouvoir cliquer sur un bouton et faire défiler les astres.
 Modèle 3D : avatar parmis des piles de livres
-### rédaction
-TODO.
 
 ## 5 Mes expériences professionnelles
 > Un aperçu des stages, emplois à temps partiel, volontariats et autres expériences professionnelles, incluant les responsabilités assumées et mes compétences développées.
@@ -74,8 +73,6 @@ TODO.
 ### site
 Même présentation que le parcours scolaire.
 Modèle 3D : avatar face à un ordinateur retro (ecrant cathodique, exemple Macintosh)
-### rédaction
-TODO.
 
 ## 6 Mes projets personnels
 > Il faut parler de vos passions, de vos activités favorites et des actions personnelles éventuelles que vous avez pu mener.
@@ -84,5 +81,3 @@ TODO.
 ### site
 Même présentation que précédente (sans la partie chronologique ?).
 Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir) -> Avatar faisant de la magie/dessin ...
-### rédaction
-TODO.
