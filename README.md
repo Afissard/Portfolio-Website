@@ -4,6 +4,7 @@
 ![image du site web, WIP](img/website_current_stage_01.png)
 ![image du site web, WIP](img/website_current_stage_02.png)
 ![image du site web, WIP](img/website_current_stage_03.png)
+![image du site web, WIP](img/website_current_stage_04.png)
 
 ## Exécution du projet
 nécessite [Bun](https://bun.sh/)
@@ -44,8 +45,7 @@ Modèle 3D : mon avatar chevauchant une fusée d'artifice
 > Un CV à jour détaillant la formation, les expériences de travail, les compétences, les certifications et d'autres réalisations pertinentes.
 
 ### site
-Une image de mon CV (à corriger pour correspondre à un CV général et non à un job d'été), cliquée elle ouvre une page de téléchargement/visualisation du CV en PDF.
-Modèle 3D : avatar en holograme position "wanted"
+Un liens vers mon CV en PDF.
 ### CV en PDF
 [mon CV](./website-content/CV%20Sacha%20Chauvel%20-%20Stage.pdf)
 
@@ -53,8 +53,7 @@ Modèle 3D : avatar en holograme position "wanted"
 > La lettre de motivation est un document d'une page maximum, adressé à un recruteur pour lui faire part de votre volonté de travailler avec lui tout en lui faisant valoir vos qualités pour le poste. Il existe deux types de lettres de motivation : la candidature spontanée et la lettre qui répond à une annonce.
 
 ### site
-Lettre de motivation à écrire, présentation dans le même style que le CV (image avec redirection).
-Modèle 3D : TODO
+Un liens vers mon CV en PDF.
 ### lettre de motivation en PDF
 (Recrutement Ankama)[https://recrutement.ankama.com/]
 [ma lettre de motivation](./website-content/Sacha%20Chauvel%20Lettre%20de%20motivation%20stage%20BUT2.pdf)
@@ -84,6 +83,6 @@ TODO.
 
 ### site
 Même présentation que précédente (sans la partie chronologique ?).
-Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir) -> Avatar faisant de la magie ...
+Modèle 3D : Avatar bidouillant une machine ... (TODO : éclaicir) -> Avatar faisant de la magie/dessin ...
 ### rédaction
 TODO.

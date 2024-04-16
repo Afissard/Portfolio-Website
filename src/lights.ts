@@ -5,9 +5,9 @@ export function addAmbientLight(scene: THREE.Scene) {
 	scene.add(ambientLight);
 }
 
-export function addPointLight(scene: THREE.Scene) {
-	const pointLight = new THREE.PointLight(0xffffff);
-	pointLight.position.set(5, 5, 5);
+export function addPointLight(scene: THREE.Scene, x: number, y: number, z: number) {
+	const pointLight = new THREE.PointLight(0xffffff, 25);
+	pointLight.position.set(x, y, z);
 	scene.add(pointLight);
 
 	return pointLight;

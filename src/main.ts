@@ -1,12 +1,13 @@
 import "/css/style.css";
 import * as THREE from "three";
-// import * as helpers from "../src/helpers.ts";
+import * as helpers from "../src/helpers.ts";
 import * as loaderFunc from "../src/loader.ts";
 import * as light from "../src/lights.ts";
 import * as star from "../src/stars.ts";
 import * as placeHolder from "../src/plqceHolderBlock.ts";
 import * as rocketRider from "../src/rocketRider.ts";
 import * as bookPlanet from "../src/booksPlanet.ts";
+import * as workPlanet from "../src/workPlanet.ts";
 
 
 // Setup
@@ -53,16 +54,19 @@ Array(200)
 // PlaceHolders
 // const ph1 = new placeHolder.PlaceHolderBlock(scene, 8, 0, -16);
 // const ph2 = new placeHolder.PlaceHolderBlock(scene, -8, 5, 32);
-const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
-const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
+// const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
+// const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
 
 // load 3D model
 
 const rocketRiderObj = await loaderFunc.loadGLTFObject("/3d/rocket_rider.gltf");
-const rocketRiderModel = new rocketRider.RocketRider(scene, rocketRiderObj, 5, 0, -8);
+const rocketRiderModel = new rocketRider.RocketRider(scene, rocketRiderObj, 5, -2, -8);
 
 const bookPlanetObj = await loaderFunc.loadGLTFObject("/3d/booksPlanet.gltf")
-const bookPlanetModel = new bookPlanet.BookPlanet(scene, bookPlanetObj, -8, 2, 40)
+const bookPlanetModel = new bookPlanet.BookPlanet(scene, bookPlanetObj, -8, 0, 42)
+
+const workPlanetObj = await loaderFunc.loadGLTFObject("/3d/workPlanet.gltf")
+const workPlanetModel = new workPlanet.WorkPlanet(scene, workPlanetObj, 8, 3, 100)
 
 // function scrollTo(hash) {
 //     location.hash = "#" + hash;
@@ -89,11 +93,9 @@ moveCamera();
 function animate() {
 	requestAnimationFrame(animate);
 	
-	ph3.Animate();
-	ph4.Animate();
-
 	rocketRiderModel.Animate()
 	bookPlanetModel.Animate()
+	workPlanetModel.Animate()
 	
 	renderer.render(scene, camera);
 }

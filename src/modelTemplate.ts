@@ -2,6 +2,7 @@ import * as THREE from "three";
 
 export class modelTemplate {
     object: THREE.Object3D
+    trueY:number
 
     constructor(
         scene: THREE.Scene,
@@ -14,6 +15,7 @@ export class modelTemplate {
         this.object.position.set(x, y, z);
         // this.object.rotation.y = 90
         scene.add(this.object);
+        this.trueY = y
         
     }
 
