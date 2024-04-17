@@ -28,6 +28,7 @@
     color: var(--white-col);
 
     overflow-x: hidden;
+    background-color: black;
 }
 
 

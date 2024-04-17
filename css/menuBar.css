@@ -1,19 +1,3 @@
-/* 
-@font-face{
-    font-family: FaktosFont;
-    src: url("/fonts/faktos/Faktos.otf");
-}
-@font-face {
-    font-family: FaktosShadowFont;
-    src: url("/fonts/faktos/FaktosShadow.otf");
-}
-
-@font-face {
-    font-family: JohnstonFont;
-    src: url("/fonts/Johnston/Johnston-ITC-Std-Medium.otf");
-} 
-*/
-
 @keyframes appear {
     from {
       opacity: 0; /* Start with opacity 0 (invisible) */
@@ -21,27 +5,7 @@
     to {
       opacity: 1; /* End with opacity 1 (fully visible) */
     }
-  }
-
-/* 
-:root {
-    --dark-bg: rgba(0, 0, 0, 0.90);
-    --light-bg: rgba(200, 200, 200, 0.95);
-    --black-col: rgba(20, 20, 20, 1);
-    --white-col: rgba(240, 240, 240, 1);
-
-    --hl1-col: linear-gradient(45deg, #fc3354 0%, #fc259b 100%);
-    --hl2-col: linear-gradient(45deg, #de33fc 0%, #7725fc 100%);
-  
-    font-family: JohnstonFont, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: x-large;
-    color: var(--white-col);
-
-    overflow-x: hidden;
-} 
-*/
+}
 
 nav {
     /* position */
@@ -84,8 +48,8 @@ a:hover {
 }
 
 .menu-box > img {
-    width: 1rem;
-    height: 1rem;
+    width: 2rem;
+    height: 2rem;
     margin: 0rem 0.5rem 0rem 0.5rem;
 }
 

@@ -1,0 +1,36 @@
+footer {
+    z-index: 998;
+    margin: 2rem;
+    padding: 2rem;
+    justify-content: space-evenly;
+    display: flex;
+    flex-flow: row wrap;
+
+    /* border: solid white; */
+    background-color: linear-gradient(#01000000 0%, #1b1b1b 100%);
+    
+}
+
+
+
+.UpButton {
+    -webkit-background-clip: initial;
+    -moz-background-clip: initial;
+    -webkit-text-fill-color: initial; 
+    -moz-text-fill-color: initial;
+    
+    min-width: 2rem;
+    min-height: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    color: var(--white-col);
+    /* border: solid var(--white-col); */
+    background-image: var(--hl2-col);
+    border-radius: 2rem;
+    height: min-content;
+}
+
+.UpButton:hover {
+    background-image: var(--hl1-col);
+}
