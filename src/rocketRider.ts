@@ -1,7 +1,7 @@
 // import * as THREE from "three";
 import { modelTemplate } from "./modelTemplate";
 import * as light from "../src/lights.ts";
-import * as helpers from "../src/helpers.ts";
+// import * as helpers from "../src/helpers.ts";
 
 export class RocketRider extends modelTemplate {
     constructor(
@@ -12,7 +12,8 @@ export class RocketRider extends modelTemplate {
         z: number = 0
     ) {
         super(scene, object, x, y, z)
-        const plight = light.addPointLight(scene, x-2, y+3, z+2)
+        // const plight = light.addPointLight(scene, x-2, y+3, z+2)
+        light.addPointLight(scene, x-2, y+3, z+2)
         // helpers.addPointLightHelper(scene, plight)
     }
 

@@ -1,6 +1,6 @@
 import { modelTemplate } from "./modelTemplate";
 import * as light from "../src/lights.ts";
-import * as helpers from "../src/helpers.ts";
+// import * as helpers from "../src/helpers.ts";
 
 export class WorkPlanet extends modelTemplate {
     constructor(
@@ -11,7 +11,8 @@ export class WorkPlanet extends modelTemplate {
         z: number = 0
     ) {
         super(scene, object, x, y, z)
-        const plight = light.addPointLight(scene, x-3, y+4, z+4)
+        // const plight = light.addPointLight(scene, x-3, y+4, z+4)
+        light.addPointLight(scene, x-3, y+4, z+4)
         // helpers.addPointLightHelper(scene, plight)
     }
 
