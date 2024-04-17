@@ -29,6 +29,7 @@ Fonctionnalité à coder : un léger coup de scroll permet de se déplacer d'une
 ![image du site web, WIP](img/website_current_stage_02.png)
 ![image du site web, WIP](img/website_current_stage_03.png)
 ![image du site web, WIP](img/website_current_stage_04.png)
+![image du site web, WIP](img/website_current_stage_05.png)
 
 # Structure et contenu
 ## 1 Introduction

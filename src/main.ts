@@ -8,6 +8,7 @@ import * as placeHolder from "../src/plqceHolderBlock.ts";
 import * as rocketRider from "../src/rocketRider.ts";
 import * as bookPlanet from "../src/booksPlanet.ts";
 import * as workPlanet from "../src/workPlanet.ts";
+import * as art_Planet from "../src/artPlanet.ts";
 
 
 // Setup
@@ -53,9 +54,6 @@ Array(200)
 
 // PlaceHolders
 // const ph1 = new placeHolder.PlaceHolderBlock(scene, 8, 0, -16);
-// const ph2 = new placeHolder.PlaceHolderBlock(scene, -8, 5, 32);
-// const ph3 = new placeHolder.PlaceHolderBlock(scene, 8, 10, 64);
-// const ph4 = new placeHolder.PlaceHolderBlock(scene, -15, 10, 96);
 
 // load 3D model
 
@@ -67,6 +65,9 @@ const bookPlanetModel = new bookPlanet.BookPlanet(scene, bookPlanetObj, -8, 0, 4
 
 const workPlanetObj = await loaderFunc.loadGLTFObject("/3d/workPlanet.gltf")
 const workPlanetModel = new workPlanet.WorkPlanet(scene, workPlanetObj, 8, 3, 100)
+
+const artPlanetObj = await loaderFunc.loadGLTFObject('/3d/artPlanet.gltf')
+const artplanet = new art_Planet.ArtkPlanet(scene, artPlanetObj, -10, 5, 165)
 
 // camera
 function moveCamera() {
@@ -92,6 +93,7 @@ function animate() {
 	rocketRiderModel.Animate()
 	bookPlanetModel.Animate()
 	workPlanetModel.Animate()
+	artplanet.Animate()
 	
 	renderer.render(scene, camera);
 }
