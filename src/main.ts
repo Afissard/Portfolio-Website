@@ -68,10 +68,6 @@ const bookPlanetModel = new bookPlanet.BookPlanet(scene, bookPlanetObj, -8, 0, 4
 const workPlanetObj = await loaderFunc.loadGLTFObject("/3d/workPlanet.gltf")
 const workPlanetModel = new workPlanet.WorkPlanet(scene, workPlanetObj, 8, 3, 100)
 
-// function scrollTo(hash) {
-//     location.hash = "#" + hash;
-// }
-
 // camera
 function moveCamera() {
 	/*
