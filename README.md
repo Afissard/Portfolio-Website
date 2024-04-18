@@ -31,6 +31,9 @@ Fonctionnalité à coder : un léger coup de scroll permet de se déplacer d'une
 ![image du site web, WIP](img/website_current_stage_04.png)
 ![image du site web, WIP](img/website_current_stage_05.png)
 
+## Version final
+![video du site](sacha-chauvel_capture_rendu_final/sacha-chauvel-portfolio.mp4)
+
 # Structure et contenu
 ## 1 Introduction
 > Brève présentation de qui nous sommes, objectif académique et professionnel.
