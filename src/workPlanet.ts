@@ -1,19 +1,10 @@
-import { modelTemplate } from "./modelTemplate";
-import * as light from "../src/lights.ts";
-// import * as helpers from "../src/helpers.ts";
 
-export class WorkPlanet extends modelTemplate {
-    constructor(
-        scene: THREE.Scene,
-        object: THREE.Object3D,
-        x: number = 0,
-        y: number = 0,
-        z: number = 0
-    ) {
-        super(scene, object, x, y, z)
-        // const plight = light.addPointLight(scene, x-3, y+4, z+4)
-        light.addPointLight(scene, x-3, y+4, z+4)
-        // helpers.addPointLightHelper(scene, plight)
+import { ModelTemplate } from "./modelTemplate";
+
+export class WorkPlanet extends ModelTemplate {
+
+    public AddLight(scene: THREE.Scene, x: number, y: number, z: number): void {
+        super.AddLight(scene, x-3, y+4, z+4)
     }
 
     public Animate() {

@@ -1,9 +1,9 @@
-import * as THREE from "three";
+import { BoxGeometry, MeshStandardMaterial, Mesh, Color } from "three";
 
 export class PlaceHolderBlock {
-	geometry = new THREE.BoxGeometry(3, 3, 3);
-	material = new THREE.MeshStandardMaterial({ color: 0xfe1493 });
-	block = new THREE.Mesh(this.geometry, this.material);
+	geometry = new BoxGeometry(3, 3, 3);
+	material = new MeshStandardMaterial({ color: 0xfe1493 });
+	block = new Mesh(this.geometry, this.material);
 
 	constructor(
 		scene: THREE.Scene,
@@ -11,7 +11,7 @@ export class PlaceHolderBlock {
 		y: number = 0,
 		z: number = 0
 	) {
-		this.material.emissive = new THREE.Color(0xfe1493); // emit light
+		this.material.emissive = new Color(0xfe1493); // emit light
 		this.block.position.x = x;
 		this.block.position.y = y;
 		this.block.position.z = z;

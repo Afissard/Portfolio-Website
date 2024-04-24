@@ -1,25 +1,25 @@
-import "/css/style.css";
-import * as THREE from "three";
-import * as loaderFunc from "../src/loader.ts";
+// import * as THREE from "three";
+import { Scene, PerspectiveCamera, WebGLRenderer } from "three";
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import * as light from "../src/lights.ts";
 import * as star from "../src/stars.ts";
-import * as rocketRider from "../src/rocketRider.ts";
-import * as bookPlanet from "../src/booksPlanet.ts";
-import * as workPlanet from "../src/workPlanet.ts";
-import * as art_Planet from "../src/artPlanet.ts";
+
+// import { ModelTemplate } from "./modelTemplate";
+import { RocketRider } from "./rocketRider.ts";
+
 
 console.log("Starting...");
 
 // Setup
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(
+const scene = new Scene();
+const camera = new PerspectiveCamera(
     75,
     window.innerWidth / window.innerHeight,
     0.1,
     1000
 );
 const canvas = document.querySelector("#bg") as HTMLCanvasElement;
-const renderer = new THREE.WebGLRenderer({
+const renderer = new WebGLRenderer({
     canvas: canvas,
 });
 
@@ -53,36 +53,51 @@ function moveCamera() {
 document.body.onscroll = moveCamera;
 moveCamera();
 
-// Load and create 3D models
-const gltfPaths = [
-    "../src/3d/rocket_rider.gltf",
-    "../src/3d/booksPlanet.gltf",
-    "../src/3d/workPlanet.gltf",
-    "../src/3d/artPlanet.gltf"
-];
+// 3D models
+// Instantiate a loader
+const loader = new GLTFLoader();
 
-loaderFunc.loadGLTFObjects(gltfPaths)
-    .then((loadedObjects) => {
-        const rocketRiderObj = new rocketRider.RocketRider(scene, loadedObjects[0], 5, -2, -8);
-        const bookPlanetObj = new bookPlanet.BookPlanet(scene, loadedObjects[1], -8, 0, 42);
-        const workPlanetObj = new workPlanet.WorkPlanet(scene, loadedObjects[2], 8, 3, 100);
-        const artPlanetObj = new art_Planet.ArtkPlanet(scene, loadedObjects[3], -10, 5, 165);
+let rocketRider = new RocketRider();
 
-        console.log("Models loaded successfully");
+// Load a glTF resource
+loader.load(
+	// resource URL
+	'../3d/rocket_rider.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
 
-        // Animation loop
-        function animate() {
-            requestAnimationFrame(animate);
+        rocketRider.GetObject(gltf.scene)
+        rocketRider.AddToScene(scene);
+        rocketRider.SetPos(5, -2, -8)
+        rocketRider.AddLight(scene, 5, -2, -8)
+        
+		// scene.add( gltf.scene );
 
-            rocketRiderObj.Animate();
-            bookPlanetObj.Animate();
-            workPlanetObj.Animate();
-            artPlanetObj.Animate();
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Group
+		gltf.scenes; // Array<THREE.Group>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
 
-            renderer.render(scene, camera);
-        }
-        animate();
-    })
-    .catch((error) => {
-        console.error('An error occurred while loading GLTF files:', error);
-    });
+	},
+	// called while loading is progressing
+	function ( xhr ) {
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+	},
+	// called when loading has errors
+	function ( error: any) {
+		console.log( 'An error happened :\n', error );
+	}
+);
+
+console.log("Setup done")
+
+// Animation loop
+function animate() {
+    requestAnimationFrame(animate);
+
+    rocketRider.Animate();
+
+    renderer.render(scene, camera);
+}
+animate();
