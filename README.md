@@ -9,12 +9,19 @@ Installation des dépendances
 bun install
 ```
 
-Lancement du serveur en local
+Lancement du serveur en local (le mode developpement est totalement fonctionnel)
 ```bash
 bun run dev
 ```
+[lien vers la page web "in development"](http://localhost:5173/)
 
-[lien vers la page web en local](http://localhost:5173/)
+Compilation et lancement de la preview (les fichiers gltf sont compilés avec le script et cause une erreur)
+```bash
+bun run build && bun run preview
+```
+[lien vers la preview de la page web](http://localhost:4173/)
+
+Une fois compiler, il suffit de mettre le dossier `./dist` en ligne sur un serveur (apache par exemple).
 
 # Idée du design du site
 Le site est un "système solaire", en scrollant la caméra se déplace du centre vers le périphérique extérieur, chaque planète et astre croisé représente une des sections demandées. Chaque astre pourrait avoir son thème, un peu dans le genre des différentes planètes du Petit Prince, ou celles du monde d'Albator et de Queen Esmeraldas, imaginées par Leiji Matsumoto. Un astre peut aussi être un vaisseau spatial ou un objet représentatif du sujet, tout est bon tant que le thème de l'espace / science-fiction / cyberpunk est conservé.
@@ -60,7 +67,8 @@ Un liens vers mon CV en PDF.
 ### site
 Un liens vers mon CV en PDF.
 ### lettre de motivation en PDF
-(Recrutement Ankama)[https://recrutement.ankama.com/]
+[Page recrutement Ankama](https://recrutement.ankama.com/)
+
 [ma lettre de motivation](./website-content/Sacha%20Chauvel%20Lettre%20de%20motivation%20stage%20BUT2.pdf)
 
 ## 4 Projet scolaire
